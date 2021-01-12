@@ -1,0 +1,11 @@
+function sumInterval(first_num, second_num){
+    
+    let result = 0;
+    first_num = Number(first_num);
+    second_num = Number(second_num);
+    for(let i = first_num; i<=second_num; i++){
+        result += i; 
+    }
+
+    return result;
+}
