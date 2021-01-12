@@ -1,0 +1,5 @@
+function sumStrings(first_string, second_string, third_string){
+    let sum_of_strings = first_string.length + second_string.length + third_string.length
+    console.log(sum_of_strings);
+    console.log(Math.floor(sum_of_strings / 3));
+}
