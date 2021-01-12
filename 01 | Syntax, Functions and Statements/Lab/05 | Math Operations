@@ -1,0 +1,14 @@
+function mathOperations(first_num, second_num, operator){
+    
+    let result;
+    switch(operator){
+        case '*': result = first_num * second_num; break;
+        case '/': result = first_num / second_num; break;
+        case '+': result = first_num + second_num; break;
+        case '-': result = first_num - second_num; break;
+        case '%': result = first_num % second_num; break; 
+        case '**': result = first_num ** second_num; break;
+    }
+
+    console.log(result)
+}
