@@ -1,0 +1,10 @@
+function greatestCommonDevisor(first_num, second_num){
+    let max_num = Math.max(first_num, second_num);
+    let greatestCommonDevisor = 1;
+    for(let i = greatestCommonDevisor; i<=max_num; i++){
+        if (first_num % i == 0 && second_num % i == 0){
+            greatestCommonDevisor = i;
+        }
+    }
+    console.log(greatestCommonDevisor);
+}
