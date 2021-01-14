@@ -1,0 +1,5 @@
+function fruitCost(fruit, weight, price){
+    let weight_in_kilograms = weight / 1000;
+    let total_cost = price * weight_in_kilograms;
+    console.log(`I need $${total_cost.toFixed(2)} to buy ${weight_in_kilograms.toFixed(2)} kilograms ${fruit}.`);
+}
