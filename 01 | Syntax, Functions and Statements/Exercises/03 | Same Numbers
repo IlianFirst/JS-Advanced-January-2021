@@ -1,0 +1,24 @@
+function sameNumbers(number){
+    
+    let array_of_num = number.toString().split('');
+    let is_same = true;
+    let sum_of_digits = 0;
+    
+    for (let index = 0; index < array_of_num.length - 1; index++){
+        if (array_of_num[index] != array_of_num[index+1]){
+            is_same = false;     
+        } 
+    }
+    for (let index = 0; index < array_of_num.length; index++){
+        sum_of_digits += Number(array_of_num[index]);
+  
+    }
+    if (is_same){
+        console.log('true');
+    }
+    else{
+        console.log('false');
+    }
+    console.log(sum_of_digits);
+   
+}
