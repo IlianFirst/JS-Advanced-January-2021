@@ -1,0 +1,7 @@
+function wordsUppercase(sentence){
+    
+    sentence = sentence.toUpperCase();
+    let matches = sentence.match(/\w+/g);
+    console.log(matches.join(', '));
+
+}
