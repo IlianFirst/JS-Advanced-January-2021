@@ -1,0 +1,27 @@
+function roadRadar(speed, area){
+    speed = Number(speed);
+    let speed_limit = 0;
+    switch(area){
+        case 'motorway': speed_limit=130; break;
+        case 'interstate': speed_limit=90; break;
+        case 'city': speed_limit=50; break;
+        case 'residential': speed_limit=20; break;
+    }
+    if (speed <= speed_limit){
+        console.log(`Driving ${speed} km/h in a ${speed_limit} zone`);
+    }
+    else{
+        let status = '';
+        if (speed - speed_limit <= 20){
+            status = 'speeding';
+        }
+        else if(speed - speed_limit >= 20 && speed - speed_limit <= 40){
+            status = 'excessive speeding';
+        }
+        else{
+            status = 'reckless driving';
+        }
+        console.log(`The speed is ${speed - speed_limit} km/h faster than the allowed speed of ${speed_limit} - ${status}`);
+    }
+    
+}
