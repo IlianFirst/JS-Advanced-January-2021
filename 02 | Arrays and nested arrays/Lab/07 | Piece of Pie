@@ -1,0 +1,15 @@
+function pieceOfPie(arr, first_ingr, second_ingr){
+    
+    let start_index = -1;
+    let end_index = -1;
+    for (let index = 0; index < arr.length; index++){
+        
+        if (arr[index] == first_ingr && start_index === -1){
+            start_index = index;
+        }
+        if (arr[index] == second_ingr && end_index === -1){
+            end_index = index;
+        }
+    }
+    return arr.slice(start_index, end_index + 1);
+}
