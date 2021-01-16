@@ -1,0 +1,5 @@
+function firstLast(nums){
+    first_el = Number(nums.shift());
+    last_el = Number(nums.pop());
+    return first_el + last_el;
+}
