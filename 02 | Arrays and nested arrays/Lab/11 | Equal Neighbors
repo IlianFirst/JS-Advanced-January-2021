@@ -1,0 +1,27 @@
+function equalNeighbors(arr) {
+
+    let counter = 0;
+    for (let index = 0; index < arr.length-1; index++) {  
+      for (let j = 1; j < arr[index].length; j++) {   
+        if(arr[index][j] == arr[index+1][j]){
+          counter++;
+        }
+        if(arr[index][j] == arr[index][j - 1]){
+          counter++;
+        }
+      }
+    }
+  
+    for (let index = 0; index < arr[arr.length-1].length; index++) {
+      if(arr[arr.length-1][index] == arr[arr.length-1][index + 1]){
+        counter++;
+      }
+    }
+    for (let index = 0; index < arr.length-1; index++) {
+      if(arr[index][0] == arr[index+1][0]){
+        counter++;
+      }
+    }
+    console.log(counter)
+  
+}
