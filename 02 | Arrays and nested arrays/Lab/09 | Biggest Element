@@ -1,0 +1,14 @@
+function biggestElement(matrix){
+
+    matrix = matrix.reduce(reduceFunc);
+    function reduceFunc(acc, c){
+        return acc.concat(c);
+    }
+    
+    max_num = matrix.reduce(findMax);
+    function findMax(acc, c){
+        return Math.max(acc, c)
+    }
+    return max_num;
+
+}
