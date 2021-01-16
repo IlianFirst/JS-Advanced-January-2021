@@ -1,0 +1,9 @@
+function processOddPositions(nums){
+    
+    odd_res = [];
+    for (let index = 1; index < nums.length; index+=2){
+            odd_res[odd_res.length] = nums[index] * 2;
+    }
+    return odd_res.reverse();
+
+}
