@@ -1,0 +1,10 @@
+function diagonal(matrix){
+
+    let first_diagonal_sum = 0;
+    let second_diagonal_sum = 0;
+    for (let index = 0; index < matrix.length; index++){
+        first_diagonal_sum += matrix[index][index];
+        second_diagonal_sum += matrix[index][matrix.length - index - 1];
+    }
+    return `${first_diagonal_sum} ${second_diagonal_sum}`;
+}
