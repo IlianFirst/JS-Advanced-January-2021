@@ -1,0 +1,8 @@
+function evenPositionElement(numbers){
+    
+    let result = [];
+    for (let index=0; index < numbers.length; index+=2){
+            result[result.length] = numbers[index];
+    }
+    console.log(result.join(' '));
+}
