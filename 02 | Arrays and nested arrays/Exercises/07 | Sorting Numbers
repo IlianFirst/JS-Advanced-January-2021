@@ -1,0 +1,24 @@
+function sortingNumbers(array) {
+
+    let result = [];
+    let numbers = array.sort((a, b) => a - b);
+    if (numbers.length % 2 === 0) {
+        let smallest_numbers = numbers.slice(0, numbers.length / 2);
+        let biggest_numbers = numbers.slice(numbers.length / 2).reverse();
+        for (let index = 0; index < numbers.length / 2; index++) {
+            result.push(smallest_numbers[index]);
+            result.push(biggest_numbers[index]);
+        }
+    } else {
+        let smallest_numbers = numbers.slice(0, numbers.length / 2);
+        let biggest_numbers = numbers.slice(numbers.length / 2 + 1).reverse();
+        for (let index = 0; index < numbers.length/2-1; index++){
+            result.push(smallest_numbers[index]);
+            result.push(biggest_numbers[index]);
+        }
+        result.push(numbers[Math.ceil(numbers.length/2-1)]);
+    }
+
+
+    return result;
+}
