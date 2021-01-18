@@ -1,0 +1,13 @@
+function addAndRemoveAnElement(array){
+    let result = [];
+    let number = 1;
+    for (let index = 0; index < array.length; index++){
+        if (array[index] == 'add'){
+            result.push(number);
+        } else if (array[index] == 'remove'){
+            result.pop();
+        }
+        number++;
+    }
+    return result.length != 0 ? result.join('\n'): "Empty";
+}
