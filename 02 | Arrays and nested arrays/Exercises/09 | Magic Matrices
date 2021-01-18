@@ -1,0 +1,35 @@
+function magicMatrice(arr) {
+
+    let is_magic = true;
+    let sum = 0;
+    let previous_sum = 0;
+    for (let index = 0; index < arr.length; index++) {
+        for (let index_two = 0; index_two < arr.length; index_two++) {
+            sum += arr[index][index_two];
+        }
+
+        if (previous_sum == 0) {
+            previous_sum = sum;
+        }
+        if (sum != previous_sum) {
+            return false
+        }
+        sum = 0;
+    }
+
+    for (let index = 0; index < arr.length; index++) {
+        for (let index_two = 0; index_two < arr.length; index_two++) {
+            sum += arr[index_two][index];
+        }
+      
+        if (previous_sum == 0) {
+            previous_sum = sum;
+        }
+        if (sum != previous_sum) {
+            return false
+        }
+        sum = 0;
+    }
+
+    return true;
+}
