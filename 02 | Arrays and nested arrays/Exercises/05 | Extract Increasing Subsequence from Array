@@ -1,0 +1,13 @@
+function extractIncreasing(array){
+
+    result = [];
+    for (let index = 0; index < array.length; index++){
+        let el = array[index];
+
+        if (el >= result[result.length - 1] || result.length === 0){
+            result.push(el);
+        } 
+    }
+    return result;
+
+}
