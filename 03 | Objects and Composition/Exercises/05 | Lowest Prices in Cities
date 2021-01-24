@@ -1,0 +1,20 @@
+function solve(input) {
+    let result = {}
+    for (let i = 0; i < input.length; i++) {
+        let current = input[i].split(' | ')
+        let town = current[0]
+        let product = current[1]
+        let price = Number(current[2])
+        if (result[product] === undefined) {
+            result[product] = [price, town]
+        } else {
+            if (price < result[product][0]) {
+                result[product] = [price, town]
+            }
+        }
+    }
+    for (let product in result) {
+        console.log(`${product} -> ${result[product][0]} (${result[product][1]})`)
+    }
+ 
+}
