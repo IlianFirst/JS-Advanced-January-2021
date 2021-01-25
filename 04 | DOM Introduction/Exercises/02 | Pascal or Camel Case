@@ -1,0 +1,30 @@
+function solve() {
+  let input = document.querySelector("input")
+  let type = [...document.querySelectorAll("input")][1];
+ 
+  let funcs = {
+    "Camel Case": camile,
+    "Pascal Case": pascal,
+  }
+ 
+  document.getElementById("result").innerHTML = funcs[type.value] ? funcs[type.value](input.value) : "Error!"
+ 
+ 
+  function pascal(text){
+    return text.split(" ").map(x => x.toLowerCase()).map(x => {
+      let result = x.split("")
+      result[0] = result[0].toUpperCase()
+      return result.join("")
+    }).join("")
+  }
+  function camile(text){  
+    return text.split(" ").map(x => x.toLowerCase()).map((x,i) => {
+      let result = x.split("")
+      if(i !== 0 ){
+        result[0] = result[0].toUpperCase()
+      }
+      return result.join("")
+    }).join("")
+  }
+ 
+}
