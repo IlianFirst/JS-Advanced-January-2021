@@ -1,0 +1,24 @@
+function solve() {
+  let text = document.getElementById('input').value;
+  console.log(text);
+  let output = document.getElementById('output');
+  let sentances = text.split('.');
+  const indexOf = sentances.indexOf('');
+  if (indexOf > -1) {
+       sentances.splice(indexOf, 1);
+  }
+
+  let result = '';
+  let fullParagraphs = Math.floor(sentances.length / 3);
+  for (let i = 0; i < fullParagraphs; i++){
+    result += '<p>' + sentances.slice(0, 3).join('.') + '.' + '</p>'
+    sentances = sentances.splice(3);
+  }
+  console.log(sentances.length);
+  if(sentances.length > 0 && sentances.length < 3){
+    result += '<p>' + sentances.join('.') + '.' + '</p>';
+  }
+  console.log(result);
+  output.innerHTML = result;
+  
+}
