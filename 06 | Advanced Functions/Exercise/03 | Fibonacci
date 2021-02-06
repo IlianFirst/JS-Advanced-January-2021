@@ -1,0 +1,11 @@
+function getFibonator(){
+    let previous = 0;
+    let curr = 1;
+    return function fib() {
+        let result = previous + curr;
+        previous = curr;
+        curr = result;
+        return previous;
+    };
+
+}
