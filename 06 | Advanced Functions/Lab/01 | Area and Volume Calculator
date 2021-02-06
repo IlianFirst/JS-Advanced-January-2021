@@ -1,0 +1,12 @@
+
+function areaAndVolume(area, vol, data) {
+    return JSON.parse(data).map((obj) => ({ area: area.call(obj), volume: vol.call(obj) }));
+}
+
+function area() {
+    return Math.abs(this.x * this.y);
+}
+
+function vol() {
+    return Math.abs(this.x * this.y * this.z);
+}
